@@ -1,0 +1,77 @@
+{
+  "flights": [
+    {
+      "lastUpdatedAt": "2024-09-18T02:00:01.740+02:00",
+      "actualLandingTime": "2024-09-18T00:10:21.000+02:00",
+      "aircraftType": {
+        "iataMain": "737",
+        "iataSub": "73H"
+      },
+      "baggageClaim": {
+        "belts": ["2"]
+      },
+      "estimatedLandingTime": "2024-09-18T00:10:21.000+02:00",
+      "expectedTimeOnBelt": "2024-09-18T00:52:35.000+02:00",
+      "flightDirection": "A",
+      "flightName": "HV5642",
+      "flightNumber": 5642,
+      "id": "140674803324836944",
+      "isOperationalFlight": true,
+      "mainFlight": "HV5642",
+      "prefixIATA": "HV",
+      "prefixICAO": "TRA",
+      "airlineCode": 164,
+      "publicFlightState": {
+        "flightStates": ["ARR", "EXP"]
+      },
+      "route": {
+        "destinations": ["SPC"],
+        "eu": "S",
+        "visa": false
+      },
+      "scheduleDateTime": "2024-09-18T00:00:00.000+02:00",
+      "scheduleDate": "2024-09-18",
+      "scheduleTime": "00:00:00",
+      "serviceType": "J",
+      "terminal": 1,
+      "schemaVersion": "4"
+    },
+
+    {
+      "lastUpdatedAt": "2024-09-18T02:44:10.725+02:00",
+      "actualLandingTime": "2024-09-18T00:38:14.000+02:00",
+      "aircraftType": {
+        "iataMain": "32S",
+        "iataSub": "32Q"
+      },
+      "baggageClaim": {
+        "belts": ["2"]
+      },
+      "estimatedLandingTime": "2024-09-18T00:38:14.000+02:00",
+      "expectedTimeOnBelt": "2024-09-18T01:04:13.177+02:00",
+      "flightDirection": "A",
+      "flightName": "HV5960",
+      "flightNumber": 5960,
+      "id": "140674803324845302",
+      "isOperationalFlight": true,
+      "mainFlight": "HV5960",
+      "prefixIATA": "HV",
+      "prefixICAO": "TRA",
+      "airlineCode": 164,
+      "publicFlightState": {
+        "flightStates": ["ARR", "EXP"]
+      },
+      "route": {
+        "destinations": ["LIS"],
+        "eu": "S",
+        "visa": false
+      },
+      "scheduleDateTime": "2024-09-18T00:00:00.000+02:00",
+      "scheduleDate": "2024-09-18",
+      "scheduleTime": "00:00:00",
+      "serviceType": "J",
+      "terminal": 1,
+      "schemaVersion": "4"
+    }
+  ]
+}

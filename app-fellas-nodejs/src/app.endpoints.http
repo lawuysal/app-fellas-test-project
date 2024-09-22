@@ -1,0 +1,9 @@
+# You can use httpYac to test the endpoints
+
+GET http://localhost:3004/
+
+GET http://localhost:3004/flights
+
+GET http://localhost:3004/destinations
+
+GET http://localhost:3004/airlines/DAL
