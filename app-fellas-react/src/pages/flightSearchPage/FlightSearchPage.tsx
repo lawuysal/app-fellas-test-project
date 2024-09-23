@@ -1,23 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
 import FindFlights from "./FindFlights";
-import BookingCard from "./BookingCard";
-import { Flight } from "@/types/Flight";
+import FlightCard from "./FlightCard";
 import Loading from "@/components/Loading";
+import useFlights from "@/hooks/useFlights";
 
 export default function Bookings() {
-  const {
-    data: flights,
-    error,
-    isLoading,
-  } = useQuery<Flight[], Error>({
-    queryKey: ["flights"],
-    queryFn: () => {
-      return fetch("http://localhost:3004/flights")
-        .then((res) => res.json())
-        .then((data) => data.flights);
-    },
-    retry: 0,
-  });
+  const { flights, error, isLoading } = useFlights();
 
   if (isLoading) return <Loading />;
   if (error) return <div>Error: {error.message}</div>;
@@ -34,7 +21,7 @@ export default function Bookings() {
           {/* Cards */}
           <div className="flex flex-col gap-16">
             {flights?.map((flight) => (
-              <BookingCard key={flight.id} flight={flight} />
+              <FlightCard key={flight.id} flight={flight} />
             ))}
           </div>
 

@@ -5,9 +5,9 @@ import { NavLink } from "react-router-dom";
 export default function MyFlights() {
   return (
     <div>
-      <p>hello from my flights</p>
-      <NavLink to={Routes.BOOKINGS}>
-        <Button>Bookings</Button>
+      <p>hello from bookings</p>
+      <NavLink to={Routes.FLIGHT_SEARCH_PAGE}>
+        <Button>Search Flights</Button>
       </NavLink>
     </div>
   );

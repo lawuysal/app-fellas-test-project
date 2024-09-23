@@ -1,24 +1,24 @@
 import Loading from "@/components/Loading";
 import { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Bookings from "./lazy-imports/Bookings.lazy";
-import MyFlights from "./lazy-imports/MyFlights.lazy";
+import FlightSearchPage from "./lazy-imports/FlightSearchPage.lazy";
+import BookingsPage from "./lazy-imports/BookingsPage.lazy";
 import Routes from "./Routes.enum";
 
 export const router = createBrowserRouter([
   {
-    path: Routes.BOOKINGS,
+    path: Routes.FLIGHT_SEARCH_PAGE,
     element: (
       <Suspense fallback={<Loading />}>
-        <Bookings />
+        <FlightSearchPage />
       </Suspense>
     ),
   },
   {
-    path: Routes.MYFLIGHTS,
+    path: Routes.BOOKINGS_PAGE,
     element: (
       <Suspense fallback={<Loading />}>
-        <MyFlights />
+        <BookingsPage />
       </Suspense>
     ),
   },
