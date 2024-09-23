@@ -22,9 +22,24 @@ apiHeaders.append("app_id", appId as string);
 apiHeaders.append("app_key", appKey as string);
 apiHeaders.append("ResourceVersion", resourceVersion as string);
 
-app.get("/flights", async (req, res) => {
+app.get("/flights/", async (req, res) => {
   const response = await fetch(
-    "https://api.schiphol.nl/public-flights/flights",
+    `https://api.schiphol.nl/public-flights/flights`,
+    {
+      method: "GET",
+      headers: apiHeaders,
+    },
+  );
+
+  const data = await response.json();
+  res.json(data);
+});
+
+app.get("/flights/:queries", async (req, res) => {
+  const queries = req.params.queries;
+
+  const response = await fetch(
+    `https://api.schiphol.nl/public-flights/flights?${queries}`,
     {
       method: "GET",
       headers: apiHeaders,
