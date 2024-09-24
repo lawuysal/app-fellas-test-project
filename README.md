@@ -1,6 +1,13 @@
 # App Fellas Test Project
  A recruitment project for App Fellas 
 
+ Both frontend and backend projects are in this repository. 
+
+ I used Vite for the React application. To compile it, running <code>npm install<code/> and <code>npm run dev<code/> must be enough.
+
+ I used NodeJS with ExpressJS. To compile it, you must create the <code>.env.local</code> file and fill it with <code>PORT</code>, from the Schiphol API: 
+ <code>APP_ID</code>, <code>APP_KEY</code> and <code>RESOURCE_VERSION</code>, for the MongoDB: <code>DB_URL</code> and <code>DB_PASS</code> fields. If you want to get <code>.env.local</code> file, I can provide you privately. Because it includes my remote MongoDB server information and you can't connect it without I register your IP to the Atlas service. For the best, you can use your own MongoDB connection. It'll work seamlessly.
+
 ### Built With
 
 * [![Typescript][Typescript]][Typescript-url]
@@ -11,6 +18,7 @@
 * [![Tailwind][Tailwind]][Tailwind-url]
 * [![MongoDB][MongoDB]][MongoDB-url]
 * [![NodeJS][NodeJS]][NodeJS-url]
+* [![ExpressJS][ExpressJS]][ExpressJS-url]
  
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
@@ -28,3 +36,5 @@
 [Tailwind-url]: https://tailwindcss.com/
 [Typescript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [Typescript-url]: https://www.typescriptlang.org/
+[ExpressJS]: https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white
+[ExpressJS-url]: https://expressjs.com/
