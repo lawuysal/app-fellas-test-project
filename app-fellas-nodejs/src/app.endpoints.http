@@ -1,8 +1,21 @@
-# You can use httpYac to test the endpoints
+# You can use httpYac to test these endpoints
 
 GET http://localhost:3004/
 
-GET http://localhost:3004/flights/flightDirection=D
-GET http://localhost:3004/destinations
+GET http://localhost:3004/api/getFlight/140716953078391004
+
+GET http://localhost:3004/api/flights/flightDirection=A
+GET http://localhost:3004/api/destinations/
 
 GET http://localhost:3004/airlines/DAL
+
+GET http://localhost:3004/bookings/
+
+POST http://localhost:3004/bookings/
+Content-Type: application/json
+
+{
+  "flightId": "140716953456560312"
+}
+
+DELETE http://localhost:3004/bookings/66f1f3217b440669acb71a67

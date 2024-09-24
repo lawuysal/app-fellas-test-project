@@ -1,25 +1,20 @@
-import Loading from "@/components/Loading";
+import Loading from "@/components/Loader";
 import { Suspense } from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import FlightSearchPage from "./lazy-imports/FlightSearchPage.lazy";
 import BookingsPage from "./lazy-imports/BookingsPage.lazy";
-import Routes from "./Routes.enum";
+import ROUTES from "./Routes.enum";
 
-export const router = createBrowserRouter([
-  {
-    path: Routes.FLIGHT_SEARCH_PAGE,
-    element: (
-      <Suspense fallback={<Loading />}>
-        <FlightSearchPage />
-      </Suspense>
-    ),
-  },
-  {
-    path: Routes.BOOKINGS_PAGE,
-    element: (
-      <Suspense fallback={<Loading />}>
-        <BookingsPage />
-      </Suspense>
-    ),
-  },
-]);
+export function AppRoutes() {
+  return (
+    <Suspense fallback={<Loading />}>
+      <Routes>
+        <Route
+          path={ROUTES.FLIGHT_SEARCH_PAGE}
+          element={<FlightSearchPage />}
+        />
+        <Route path={ROUTES.BOOKINGS_PAGE} element={<BookingsPage />} />
+      </Routes>
+    </Suspense>
+  );
+}

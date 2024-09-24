@@ -1,14 +1,9 @@
-import { Button } from "@/components/ui/button";
-import Routes from "@/routes/Routes.enum";
-import { NavLink } from "react-router-dom";
+import BookedFlights from "./BookedFlights";
 
-export default function MyFlights() {
+export default function BookingsPage() {
   return (
-    <div>
-      <p>hello from bookings</p>
-      <NavLink to={Routes.FLIGHT_SEARCH_PAGE}>
-        <Button>Search Flights</Button>
-      </NavLink>
+    <div className="mx-auto mt-8 grid min-h-[calc(100vh-88px)] max-w-7xl grid-cols-[3fr_1fr] pb-40 transition-all duration-300 ease-linear">
+      <BookedFlights />
     </div>
   );
 }

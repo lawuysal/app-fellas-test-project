@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scrollbar-width: thin;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -64,6 +68,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-muted text-foreground;
+    @apply overflow-y-scroll;
   }
 }

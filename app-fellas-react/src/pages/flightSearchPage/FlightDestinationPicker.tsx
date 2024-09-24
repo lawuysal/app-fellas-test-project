@@ -7,14 +7,14 @@ export default function DestinationPicker() {
         <FaPlaneDeparture className="absolute left-3 top-[0.35rem] flex items-center text-primary" />
         <input
           type="text"
-          className="border-[3px] dark:border-primary rounded-s-full pl-10"
+          className="rounded-s-full border-[3px] pl-10 dark:border-primary"
         />
       </div>
       <div className="relative">
         <FaPlaneArrival className="absolute left-3 top-[0.35rem] flex items-center text-primary" />
         <input
           type="text"
-          className="border-[3px] dark:border-primary rounded-e-full pl-10"
+          className="rounded-e-full border-[3px] pl-10 dark:border-primary"
         />
       </div>
     </div>

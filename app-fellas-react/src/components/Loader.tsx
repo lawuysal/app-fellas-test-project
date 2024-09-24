@@ -1,12 +1,12 @@
 import { Bars } from "react-loader-spinner";
 
-export default function Loading() {
+export default function Loader() {
   return (
-    <div>
+    <div className="flex min-h-[calc(100vh-88px)] min-w-fit flex-1 items-center justify-center">
       <Bars
         height="80"
         width="80"
-        color="#4fa94d"
+        color="#7C3AED"
         ariaLabel="bars-loading"
         wrapperStyle={{}}
         wrapperClass=""

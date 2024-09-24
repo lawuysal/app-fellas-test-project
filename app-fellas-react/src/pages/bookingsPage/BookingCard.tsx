@@ -1,24 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { PlaneLanding, PlaneTakeoff } from "lucide-react";
 import { IoAirplaneSharp } from "react-icons/io5";
-import { Flight } from "@/types/Flight";
 import {
   getDepartureTime,
   getFlightDuration,
   getLandingTime,
 } from "@/lib/dateUtils";
 import { getFlightPrice } from "@/lib/priceUtils";
-import BookingCardAirlineName from "./AirlineName";
-import CityName from "./CityName";
+import { useGetFlight } from "@/hooks/useGetFlight";
+import CityName from "../flightSearchPage/CityName";
+import BookingCardAirlineName from "../flightSearchPage/AirlineName";
+import Loader from "@/components/Loader";
 import BookingButton from "@/components/BookingButton";
 
-export default function BookingCard({ flight }: { flight: Flight }) {
+export default function BookingCard({ flightId }: { flightId: string }) {
+  const { data: flight, isLoading, error } = useGetFlight(flightId);
+
+  if (error) return <div>Error: {error.message}</div>;
+  if (isLoading) return <Loader />;
+
   return (
     <div className="relative flex flex-col gap-6 rounded-lg rounded-bl-[0] bg-background p-6 dark:bg-background/40">
       <div className="inline-flex items-start font-semibold">
         <CityName
-          iata={flight.route.destinations[0]}
-          flightDirection={flight.flightDirection}
+          iata={flight!.route.destinations[0]}
+          flightDirection={flight!.flightDirection}
         />
       </div>
       <div className="grid grid-cols-5 items-center justify-center">
@@ -27,11 +33,11 @@ export default function BookingCard({ flight }: { flight: Flight }) {
             <PlaneTakeoff size={15} className="text-gray-500" />
             <p>Departure</p>
           </div>
-          <p>{getDepartureTime(flight.scheduleDateTime)}</p>
+          <p>{getDepartureTime(flight!.scheduleDateTime)}</p>
           <p className="text-sm text-gray-500">
             Airport:{" "}
-            {flight.flightDirection === "A"
-              ? flight.route.destinations[0]
+            {flight!.flightDirection === "A"
+              ? flight!.route.destinations[0]
               : "AMS"}
           </p>
         </div>
@@ -39,12 +45,12 @@ export default function BookingCard({ flight }: { flight: Flight }) {
           <div className="w-[60%] border-2"></div>
         </div>
         <div className="flex flex-col items-center justify-center gap-1">
-          <BookingCardAirlineName prefixICAO={flight.prefixICAO} />
+          <BookingCardAirlineName prefixICAO={flight!.prefixICAO} />
           <IoAirplaneSharp />
           <p className="text-sm text-gray-500">
             {getFlightDuration(
-              flight.estimatedLandingTime,
-              flight.scheduleDateTime,
+              flight!.estimatedLandingTime,
+              flight!.scheduleDateTime,
             )}
           </p>
         </div>
@@ -58,14 +64,14 @@ export default function BookingCard({ flight }: { flight: Flight }) {
           </div>
           <p>
             {getLandingTime(
-              flight.estimatedLandingTime,
-              flight.scheduleDateTime,
+              flight!.estimatedLandingTime,
+              flight!.scheduleDateTime,
             )}
           </p>
           <p className="text-sm text-gray-500">
             Airport:{" "}
-            {flight.flightDirection === "D"
-              ? flight.route.destinations[0]
+            {flight!.flightDirection === "D"
+              ? flight!.route.destinations[0]
               : "AMS"}
           </p>
         </div>
@@ -73,7 +79,10 @@ export default function BookingCard({ flight }: { flight: Flight }) {
       <div>
         <p>
           Price: $
-          {getFlightPrice(flight.estimatedLandingTime, flight.scheduleDateTime)}
+          {getFlightPrice(
+            flight!.estimatedLandingTime,
+            flight!.scheduleDateTime,
+          )}
         </p>
       </div>
       <Button
@@ -82,7 +91,7 @@ export default function BookingCard({ flight }: { flight: Flight }) {
       >
         Check the details
       </Button>
-      <BookingButton flightId={flight.id} />
+      <BookingButton flightId={flight!.id} />
     </div>
   );
 }

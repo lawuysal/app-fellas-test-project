@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Destination } from "@/types/Destination";
+import { ENDPOINTS } from "@/api/endpoints";
 
 export function useCityName(iata: string) {
   const {
@@ -9,7 +10,7 @@ export function useCityName(iata: string) {
   } = useQuery<Destination, Error>({
     queryKey: ["destination", iata],
     queryFn: () => {
-      return fetch(`http://localhost:3004/destinations/${iata}`)
+      return fetch(`${ENDPOINTS.DESTINATIONS}/${iata}`)
         .then((res) => res.json())
         .then((data) => data);
     },

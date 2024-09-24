@@ -1,14 +1,13 @@
-import { RouterProvider } from "react-router-dom";
-import { router } from "./routes/AppRoutes.tsx";
 import { ThemeProvider } from "@/components/dark-mode/theme-provider.tsx";
 import Navbar from "./components/navbar/Navbar.tsx";
+import { AppRoutes } from "./routes/AppRoutes.tsx";
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="bg-muted">
         <Navbar />
-        <RouterProvider router={router} />
+        <AppRoutes />
       </div>
     </ThemeProvider>
   );

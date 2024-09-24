@@ -1,3 +1,4 @@
+import { ENDPOINTS } from "@/api/endpoints";
 import { Airline } from "@/types/Airline";
 import { useQuery } from "@tanstack/react-query";
 
@@ -9,7 +10,7 @@ export default function useAirlineName(prefixICAO: string) {
   } = useQuery<Airline, Error>({
     queryKey: ["airline", prefixICAO],
     queryFn: () => {
-      return fetch(`http://localhost:3004/airlines/${prefixICAO}`)
+      return fetch(`${ENDPOINTS.AIRLINES}/${prefixICAO}`)
         .then((res) => res.json())
         .then((data) => data);
     },
