@@ -19,6 +19,47 @@
 * [![MongoDB][MongoDB]][MongoDB-url]
 * [![NodeJS][NodeJS]][NodeJS-url]
 * [![ExpressJS][ExpressJS]][ExpressJS-url]
+
+## Project Screenshots  
+### Main Page  
+![Main Page](https://raw.githubusercontent.com/lawuysal/images/refs/heads/main/app-fellas-screenshots/001.png)  
+In the navbar, `Deals`, `Discover` and `Profile` parts do not work. Navigating to `My Flights` and the dark mode switch works.
+In the search part, I added a flight direction switcher to choose from "departure" and "arrival" and I added a date picker to filter flights between those dates. "Search flights" button queries for the dates.
+"Clear filters" button basically clears the queries in the URL. 
+Since I used the queries for active filtering, it's possible to share queried flights with links from the website. 
+
+### Date Picking
+![Date Picking](https://raw.githubusercontent.com/lawuysal/images/refs/heads/main/app-fellas-screenshots/002.png)  
+I used Shadcn for the components. They are really customizable and looks awesome. 
+
+### Dates Picked
+![Dates Picked](https://raw.githubusercontent.com/lawuysal/images/refs/heads/main/app-fellas-screenshots/003.png)  
+For the cards, I tried to provide information about flights as much as API let me to do it.
+For example the `Price` part does not included in the API but I calculated some dates to manipulate it.
+`Check the details` button does not work. It's just visual sugar. I really wanted to follow design that you sent.
+
+### Fligth Booked
+![Flight Booked](https://raw.githubusercontent.com/lawuysal/images/refs/heads/main/app-fellas-screenshots/004.png)
+As you can see buttons was disabled when a flight before today is listed. 
+We can click button to book a flight and we can see them in the `Bookings`(I added main page as `My Flights` button to recognize it easily.) page.
+Same button turns into `Cancel Booking` to cancel or delete the flight booking from the backend.
+Also you can see a toast notification at the bottom-left of the page.
+
+### Dark Mode
+![Dark Mode](https://raw.githubusercontent.com/lawuysal/images/refs/heads/main/app-fellas-screenshots/005.png)
+I added a dark mode with the help of shadcn because some users willingly look for a dark mode to rest their eyes :)
+I tweaked some colors to make it compatible with the brand coloring.
+Also, I added another toast notification to indicate that flight booking is deleted.
+
+### My Flights Page
+![My Flights Page](https://raw.githubusercontent.com/lawuysal/images/refs/heads/main/app-fellas-screenshots/006.png)
+This is the `My Flights` or `Bookings` page. I used almost the same flight card here. But their difference is, this card making its own request to gather flight information from the server using `useGetFlight` hook.
+Also, I added a little indicator to show how many flights have been booked that found in the database.
+
+### MongoDB Documents
+![MongoDB Documents](https://raw.githubusercontent.com/lawuysal/images/refs/heads/main/app-fellas-screenshots/007.png)
+This is how the booked flights looks in the database. I basically saving the `flightId` and getting the flight information by using it.  
+
  
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
