@@ -3,6 +3,10 @@ import { Button } from "./ui/button";
 import { useGetBookings } from "@/hooks/useGetBookings";
 import { useDeleteBookedFlight } from "@/hooks/useDeleteBookedFlight";
 
+// Booking button for the flight card
+// Changes text based on the booking status
+// Gets disabled if the flight is in the past
+
 export default function BookingButton({
   flightId,
   scheduleDateTime,

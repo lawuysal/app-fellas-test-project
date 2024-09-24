@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import { apiHeaders } from "../api/apiHeaders";
 
+// Request handlers for the airplane API
+
 export async function getApiFlight(req: Request, res: Response) {
   const flightId = req.params.flightId;
 

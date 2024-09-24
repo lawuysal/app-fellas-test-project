@@ -2,6 +2,8 @@ import { ENDPOINTS } from "@/api/endpoints";
 import { Airline } from "@/types/Airline";
 import { useQuery } from "@tanstack/react-query";
 
+// This hook is used to get the airline name from the prefixICAO
+
 export default function useAirlineName(prefixICAO: string) {
   const {
     data: airline,

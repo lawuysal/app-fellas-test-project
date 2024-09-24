@@ -4,6 +4,9 @@ import useFlights from "@/hooks/useFlights";
 import FlightFilters from "./FlightFilters";
 import LoaderMini from "@/components/LoaderMini";
 
+// Flight search page
+// This is the main page of the project
+
 export default function FlightSearchPage() {
   const { flights, isLoading } = useFlights();
 

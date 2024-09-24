@@ -6,6 +6,8 @@ import {
   getApiFlight,
 } from "../controllers/apiControllers";
 
+// Router to handle airplane API's routes
+
 const router = Router();
 
 router.route("/flights/:queries?").get(getApiFlights);

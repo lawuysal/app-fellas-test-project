@@ -13,6 +13,10 @@ import BookingCardAirlineName from "../flightSearchPage/AirlineName";
 import Loader from "@/components/Loader";
 import BookingButton from "@/components/BookingButton";
 
+// Booking card component
+// Displays flight details
+// Queries the flight details by ID
+
 export default function BookingCard({ flightId }: { flightId: string }) {
   const { data: flight, isLoading, error } = useGetFlight(flightId);
 
@@ -91,7 +95,10 @@ export default function BookingCard({ flightId }: { flightId: string }) {
       >
         Check the details
       </Button>
-      <BookingButton flightId={flight!.id} />
+      <BookingButton
+        flightId={flight!.id}
+        scheduleDateTime={flight!.scheduleDateTime}
+      />
     </div>
   );
 }

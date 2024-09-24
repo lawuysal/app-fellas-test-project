@@ -5,6 +5,8 @@ import {
   subHours,
 } from "date-fns";
 
+// Helper functions to format date and time from the API responses
+
 // returns the formatted departure time like 02:00 AM
 export function getDepartureTime(scheduleDateTime: string) {
   return formatDate(subHours(new Date(scheduleDateTime), 2), "HH:mm a");

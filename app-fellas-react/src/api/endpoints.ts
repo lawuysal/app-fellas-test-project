@@ -1,3 +1,5 @@
+// Definition of the endpoints used in the application
+
 export const ENDPOINTS = {
   GET_FLIGHT: "http://localhost:3004/api/getFlight",
   FLIGHTS: "http://localhost:3004/api/flights",

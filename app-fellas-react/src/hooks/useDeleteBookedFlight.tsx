@@ -2,6 +2,8 @@ import { ENDPOINTS } from "@/api/endpoints";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 
+// This hook is used to delete a booked flight
+
 export function useDeleteBookedFlight() {
   const queryClient = useQueryClient();
   const { toast } = useToast();

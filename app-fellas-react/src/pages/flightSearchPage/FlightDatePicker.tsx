@@ -11,6 +11,8 @@ import {
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
+// Flight date picker component from the FindFlights component
+
 export default function FlightDatePicker({
   onDateChange,
 }: {

@@ -5,6 +5,8 @@ import {
   getBookings,
 } from "../controllers/bookingController";
 
+// Router to handle booking routes
+
 const router = Router();
 
 router.route("/").get(getBookings).post(createBooking);

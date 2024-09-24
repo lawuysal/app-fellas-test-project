@@ -15,6 +15,7 @@ app.use(
   }),
 );
 
+// Api router endpoints
 app.use("/api", apiRouter);
 app.use("/bookings", bookingRouter);
 

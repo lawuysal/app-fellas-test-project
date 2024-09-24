@@ -1,5 +1,8 @@
 import { FaPlaneArrival, FaPlaneDeparture } from "react-icons/fa";
 
+// Destination picker component from the FindFlights component
+// Currently not used in the project
+
 export default function DestinationPicker() {
   return (
     <div className="flex gap-1">

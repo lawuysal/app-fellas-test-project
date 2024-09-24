@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useSearchParams } from "react-router-dom";
 
+// Flight direction switch component
+// This component is used to switch between arrival and departure flights
+// Sets the url search params accordingly
+
 export default function FlightDirectionSwitch() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isArrival, setIsArrival] = useState(

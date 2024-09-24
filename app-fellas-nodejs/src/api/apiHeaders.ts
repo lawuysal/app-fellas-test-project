@@ -1,3 +1,5 @@
+// Easy accesble airplane API headers
+
 const appId = process.env.APP_ID;
 const appKey = process.env.APP_KEY;
 const resourceVersion = process.env.RESOURCE_VERSION;

@@ -6,6 +6,8 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import FlightDatePicker from "./FlightDatePicker";
 
+// Flight search component for the main page
+
 export default function FindFlights() {
   const [searchQueries, setSearchQueries] = useState<URLSearchParams>(
     new URLSearchParams(),

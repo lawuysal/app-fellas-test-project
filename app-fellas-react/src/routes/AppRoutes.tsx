@@ -5,6 +5,7 @@ import FlightSearchPage from "./lazy-imports/FlightSearchPage.lazy";
 import BookingsPage from "./lazy-imports/BookingsPage.lazy";
 import ROUTES from "./Routes.enum";
 
+// This is the main routing component that will be used in the App.tsx file.
 export function AppRoutes() {
   return (
     <Suspense fallback={<Loading />}>

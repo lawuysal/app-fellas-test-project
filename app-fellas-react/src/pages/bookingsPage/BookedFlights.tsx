@@ -1,6 +1,9 @@
 import { useGetBookings } from "@/hooks/useGetBookings";
 import BookingCard from "./BookingCard";
 
+// Booked flights
+// This component displays the booked flights
+
 export default function BookedFlights() {
   const { data: bookings } = useGetBookings();
 

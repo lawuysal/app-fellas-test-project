@@ -8,6 +8,9 @@ import {
 import { useQueryClient } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
 
+// Flight filters component for the main page
+// Located at right side of the flight cards
+
 export default function FlightFilters() {
   const [searchParams, setSearchParams] = useSearchParams();
   const queryClient = useQueryClient();

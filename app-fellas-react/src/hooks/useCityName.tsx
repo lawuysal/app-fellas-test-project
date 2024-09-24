@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import { Destination } from "@/types/Destination";
 import { ENDPOINTS } from "@/api/endpoints";
 
+// This hook is used to get the city name from the IATA code
+
 export function useCityName(iata: string) {
   const {
     data: destination,

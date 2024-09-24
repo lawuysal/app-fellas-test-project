@@ -1,6 +1,8 @@
 import { BASE_PRICE } from "@/lib/settings";
 import { getFlightDurationInMilliseconds } from "./dateUtils";
 
+// Creating a fake price for the flight
+
 // returns the price of the flight
 export function getFlightPrice(
   estimatedLandingTime: string,

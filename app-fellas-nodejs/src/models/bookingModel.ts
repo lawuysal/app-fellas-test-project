@@ -1,6 +1,8 @@
 import { Schema, model, Model } from "mongoose";
 import { BookingDocument } from "../types/BookingDocument";
 
+// A mongoose model for the booking collection in the database
+
 const bookingSchema = new Schema<BookingDocument>({
   flightId: {
     type: String,

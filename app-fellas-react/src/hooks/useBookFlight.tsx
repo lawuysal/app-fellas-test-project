@@ -2,6 +2,8 @@ import { ENDPOINTS } from "@/api/endpoints";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 
+// This hook is used to book a flight
+
 export function useBookFlight() {
   const queryClient = useQueryClient();
   const { toast } = useToast();

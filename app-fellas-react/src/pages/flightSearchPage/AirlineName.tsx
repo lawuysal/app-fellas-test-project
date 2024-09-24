@@ -1,6 +1,8 @@
 import useAirlineName from "@/hooks/useAirlineName";
 import { useToast } from "@/hooks/use-toast";
 
+// Airline name in the flight and booking card
+
 export default function BookingCardAirlineName({
   prefixICAO,
 }: {

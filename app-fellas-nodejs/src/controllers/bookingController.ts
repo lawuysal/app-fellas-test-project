@@ -2,6 +2,8 @@ import { Request, Response } from "express";
 import Booking from "../models/bookingModel";
 import { CreateBookingRequestDTO } from "../models/dtos/createBookingRequestDTO";
 
+// Request handlers for the booking API
+
 export async function getBookings(req: Request, res: Response) {
   const bookings = await Booking.find();
 

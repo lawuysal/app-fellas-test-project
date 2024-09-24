@@ -12,6 +12,8 @@ import BookingCardAirlineName from "./AirlineName";
 import CityName from "./CityName";
 import BookingButton from "@/components/BookingButton";
 
+// Flight card component
+
 export default function BookingCard({ flight }: { flight: Flight }) {
   return (
     <div className="relative flex flex-col gap-6 rounded-lg rounded-bl-[0] bg-background p-6 dark:bg-background/40">
