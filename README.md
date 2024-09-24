@@ -34,6 +34,7 @@
 * I tried to implement `Single Responsibility Rule` as much as I can do to achive a cleaner and understandable code base with the help of `Typescript`.  
 
 * Also, I used `NodeJS` server as a proxy to bypass API's `CORS` errors. You'll see I didn't send any requests to API directly.
+* Design is not responsive, please display it on a PC.
 
 ### Built With
 
