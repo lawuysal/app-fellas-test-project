@@ -30,10 +30,10 @@
 
 
 ## About the Project
-I used an airport's fligth information API to create this project. [API Link](https://developer.schiphol.nl/)  
-I tried to implement `Single Responsibility Rule` as much as I can do to achive a cleaner and understandable code base with the help of `Typescript`.  
+* I used an airport's fligth information API to create this project. [API Link](https://developer.schiphol.nl/)  
+* I tried to implement `Single Responsibility Rule` as much as I can do to achive a cleaner and understandable code base with the help of `Typescript`.  
 
-Also, I used `NodeJS` server as a proxy to bypass API's `CORS` errors. You'll see I didn't send any requests to API directly.
+* Also, I used `NodeJS` server as a proxy to bypass API's `CORS` errors. You'll see I didn't send any requests to API directly.
 
 ### Built With
 
@@ -49,10 +49,11 @@ Also, I used `NodeJS` server as a proxy to bypass API's `CORS` errors. You'll se
 
 ## How to Compile?
 
- I used Vite for the React application. To compile it, running `npm install` and `npm run dev` must be enough.
+ * I used Vite for the React application. To compile it, running `npm install` and `npm run dev` must be enough.
 
- I used NodeJS with ExpressJS. To compile it, you must create the `.env.local` file and fill it with `PORT`, from the Schiphol API:    
- `APP_ID`, `APP_KEY` and `RESOURCE_VERSION`, for the MongoDB: `DB_URL` and `DB_PASS` fields. If you want to get `.env.local` file, I can provide you privately. Because it includes my remote MongoDB server information and you can't connect it without I register your IP to the Atlas service. For the best, you can use your own MongoDB connection. It'll work seamlessly. Then, run `npm install` and `npm run watch` respectively.   
+ * I used NodeJS with ExpressJS. To compile it, you must create the `.env.local` file and fill it with `PORT`, from the Schiphol API: `APP_ID`, `APP_KEY` and `RESOURCE_VERSION`, for the MongoDB: `DB_URL` and `DB_PASS` fields.   
+ * If you want to get `.env.local` file, I can provide you privately. Because it includes my remote MongoDB server information and you can't connect it without I register your IP to the Atlas service. For the best, you can use your own MongoDB connection. It'll work seamlessly.     
+ * Then, run `npm install` and `npm run watch` respectively.   
 
  If you encounter with a problem, feel free to contact with me.
 
@@ -81,7 +82,7 @@ Also, I used `NodeJS` server as a proxy to bypass API's `CORS` errors. You'll se
 * As you can see buttons was disabled when a flight before today is listed.   
 * We can click button to book a flight and we can see them in the `Bookings`(I added main page as `My Flights` button to recognize it easily.) page.   
 * Same button turns into `Cancel Booking` to cancel or delete the flight booking from the backend.
-* I added a sorting function at the right side of the flight cards. You can sort the flights by `departure dats and times` and `arrival times` both in the ascending and descending order respectfully to API.   
+* I added a sorting function at the right side of the flight cards. You can sort the flights by `departure dats and times` and `arrival times` in both ascending and descending order, corresponding to the data from the API.  
 * Also you can see a toast notification at the bottom-left of the page.    
 
 ### Dark Mode
