@@ -3,7 +3,13 @@ import { Button } from "./ui/button";
 import { useGetBookings } from "@/hooks/useGetBookings";
 import { useDeleteBookedFlight } from "@/hooks/useDeleteBookedFlight";
 
-export default function BookingButton({ flightId }: { flightId: string }) {
+export default function BookingButton({
+  flightId,
+  scheduleDateTime,
+}: {
+  flightId: string;
+  scheduleDateTime: string;
+}) {
   const { data: bookings } = useGetBookings();
   const { mutate: bookFlight } = useBookFlight();
   const { mutate: cancelBooking } = useDeleteBookedFlight();
@@ -26,6 +32,13 @@ export default function BookingButton({ flightId }: { flightId: string }) {
       : "Book Flight";
   }
 
+  function handleButtonDisable() {
+    if (scheduleDateTime < new Date().toISOString()) {
+      return true;
+    }
+    return false;
+  }
+
   return (
     <Button
       variant={
@@ -35,6 +48,7 @@ export default function BookingButton({ flightId }: { flightId: string }) {
       }
       className="absolute bottom-0 right-0 max-w-fit rounded-bl-none rounded-tr-none px-10 py-6 font-[550]"
       onClick={handleButtonClick}
+      disabled={handleButtonDisable()}
     >
       {getButtonText()}
     </Button>

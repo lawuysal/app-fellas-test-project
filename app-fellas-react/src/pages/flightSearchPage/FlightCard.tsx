@@ -82,7 +82,10 @@ export default function BookingCard({ flight }: { flight: Flight }) {
       >
         Check the details
       </Button>
-      <BookingButton flightId={flight.id} />
+      <BookingButton
+        flightId={flight.id}
+        scheduleDateTime={flight.scheduleDateTime}
+      />
     </div>
   );
 }
