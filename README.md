@@ -3,10 +3,10 @@
 
  Both frontend and backend projects are in this repository. 
 
- I used Vite for the React application. To compile it, running <code>npm install<code/> and <code>npm run dev<code/> must be enough.
+ I used Vite for the React application. To compile it, running `npm install` and `npm run dev` must be enough.
 
  I used NodeJS with ExpressJS. To compile it, you must create the `.env.local` file and fill it with `PORT`, from the Schiphol API:    
- `APP_ID`, `APP_KEY` and `RESOURCE_VERSION`, for the MongoDB: `DB_URL` and `DB_PASS` fields. If you want to get `.env.local` file, I can provide you privately. Because it includes my remote MongoDB server information and you can't connect it without I register your IP to the Atlas service. For the best, you can use your own MongoDB connection. It'll work seamlessly.   
+ `APP_ID`, `APP_KEY` and `RESOURCE_VERSION`, for the MongoDB: `DB_URL` and `DB_PASS` fields. If you want to get `.env.local` file, I can provide you privately. Because it includes my remote MongoDB server information and you can't connect it without I register your IP to the Atlas service. For the best, you can use your own MongoDB connection. It'll work seamlessly. Then, run `npm install` and `npm run watch` respectively.
 
 ### Built With
 
