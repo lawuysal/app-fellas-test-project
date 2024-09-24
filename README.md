@@ -83,7 +83,7 @@
 * As you can see buttons was disabled when a flight before today is listed.   
 * We can click button to book a flight and we can see them in the `Bookings`(I added main page as `My Flights` button to recognize it easily.) page.   
 * Same button turns into `Cancel Booking` to cancel or delete the flight booking from the backend.
-* I added a sorting function at the right side of the flight cards. You can sort the flights by `departure dats and times` and `arrival times` in both ascending and descending order, corresponding to the data from the API.  
+* I added a sorting function at the right side of the flight cards. You can sort the flights by `departure dates and times` and `arrival times` in both ascending and descending order, corresponding to the data from the API.  
 * Also you can see a toast notification at the bottom-left of the page.    
 
 ### Dark Mode
