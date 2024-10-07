@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { Request, Response, Application } from "express";
 import Booking from "../models/bookingModel";
 import { CreateBookingRequestDTO } from "../models/dtos/createBookingRequestDTO";
 
